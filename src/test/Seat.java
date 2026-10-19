@@ -2,13 +2,14 @@ package test;
 
 public class Seat {
 
+	public static String getColumn;
 	private int seatNumber;
 	private String passName;
 	
 	Seat(){
 	}
 	Seat(int seatNumber){
-		this.seatNumber=seatNumber;																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										
+		this.seatNumber=seatNumber;																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
 	}
 	public void setSeatNumber(int seatNumber) {
 		this.seatNumber=seatNumber;
@@ -26,7 +27,7 @@ public class Seat {
 		return this.passName==null;
 	}
 	public String toString() {
-		return "seatNUmber: "+ seatNumber+"passName: "+passName;
+		return " seatNUmber: "+ seatNumber+" passName: "+passName;
 	}
 	public static boolean isValid(int seatNumber) {
 		if(seatNumber>=1 && seatNumber<=92) {
@@ -48,8 +49,5 @@ public class Seat {
 			return -1;
 		}
 	}
-public static void main(String[] args) {
-	// TODO Auto-generated method stub
-	
-}
+
 }
