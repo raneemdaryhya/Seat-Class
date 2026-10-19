@@ -12,10 +12,17 @@ public class Driver {
 		}
 		Seat s1=new Seat();
 		Seat s2=new Seat(2);
+		Train t=new Train();
+		
 		//طباعة معلومات المقعد بعد حجزه
-		System.out.println(" " + train[0][3]);
+		
 		System.out.println(" " + Seat.getColumn);
-		Train.deleteSeat(train, 5);
+		boolean success = t.reserveSeat( 5, "Ahmad");
+        System.out.println("Reserve Seat 5: " + success);
+        
+        System.out.println(" " + train[0][3]);
+	
+        //Train.deleteAllReservedSeat();
         System.out.println("Seat 5 deleted!");
 		
 		
