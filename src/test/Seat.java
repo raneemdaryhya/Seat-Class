@@ -1,3 +1,4 @@
+
 package test;
 
 public class Seat {
@@ -5,11 +6,13 @@ public class Seat {
 	public static String getColumn;
 	private int seatNumber;
 	private String passName;
-	
+
 	Seat(){
 	}
-	Seat(int seatNumber){
-		this.seatNumber=seatNumber;																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
+	Seat(int seatNumber,String passName){
+		this.seatNumber=seatNumber;
+		this.passName=passName;
+
 	}
 	public void setSeatNumber(int seatNumber) {
 		this.seatNumber=seatNumber;
@@ -20,17 +23,23 @@ public class Seat {
 	public void setPassName(String passName) {
 		this.passName=passName;
 	}
-	public String getPassNumber() {
+	public String getPassName() {
 		return passName;
 	}
-	public boolean isEmpty() {
+	/*public boolean isEmpty() {
 		return this.passName==null;
+	}*/
+	public boolean isEmpty() {
+		if(seatNumber==-1){
+			return true;
+		}
+		return false;
 	}
 	public String toString() {
 		return " seatNUmber: "+ seatNumber+" passName: "+passName;
 	}
 	public static boolean isValid(int seatNumber) {
-		if(seatNumber>=1 && seatNumber<=92) {
+		if(seatNumber>=1 && seatNumber<=92 && (seatNumber!=3 && seatNumber!=4 && seatNumber!=89 && seatNumber!=90)) {
 			return true;
 		}
 		return false;
